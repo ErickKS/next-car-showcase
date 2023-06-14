@@ -1,26 +1,16 @@
 "use client";
 
-import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { Fragment } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+
+import { CarProps } from "@/types";
+import { generateCarImageUrl } from "@/utils";
 
 interface CarDetailsProps {
   isOpen: boolean;
   closeModal: () => void;
-  car: {
-    city_mpg: number;
-    class: string;
-    combination_mpg: number;
-    cylinders: number;
-    displacement: number;
-    drive: string;
-    fuel_type: string;
-    highway_mpg: number;
-    make: string;
-    model: string;
-    transmission: string;
-    year: number;
-  };
+  car: CarProps;
 }
 
 export default function CarDetails({ isOpen, closeModal, car }: CarDetailsProps) {
@@ -62,18 +52,36 @@ export default function CarDetails({ isOpen, closeModal, car }: CarDetailsProps)
 
                   <div className="flex flex-1 flex-col gap-3">
                     <div className="relative h-40 w-full rounded-lg bg-pattern bg-cover bg-center">
-                      <Image src="/hero.png" alt="Car model" fill priority className="object-contain" />
+                      <Image src={generateCarImageUrl(car)} alt="car model" fill priority className="object-contain" />
                     </div>
 
                     <div className="flex gap-3">
                       <div className="relative h-24 w-full flex-1 rounded-lg bg-primary-blue-100">
-                        <Image src="/hero.png" alt="Car model" fill priority className="object-contain" />
+                        <Image
+                          src={generateCarImageUrl(car, "29")}
+                          alt="car model"
+                          fill
+                          priority
+                          className="object-contain"
+                        />
                       </div>
                       <div className="relative h-24 w-full flex-1 rounded-lg bg-primary-blue-100">
-                        <Image src="/hero.png" alt="Car model" fill priority className="object-contain" />
+                        <Image
+                          src={generateCarImageUrl(car, "27")}
+                          alt="car model"
+                          fill
+                          priority
+                          className="object-contain"
+                        />
                       </div>
                       <div className="relative h-24 w-full flex-1 rounded-lg bg-primary-blue-100">
-                        <Image src="/hero.png" alt="Car model" fill priority className="object-contain" />
+                        <Image
+                          src={generateCarImageUrl(car, "13")}
+                          alt="car model"
+                          fill
+                          priority
+                          className="object-contain"
+                        />
                       </div>
                     </div>
                   </div>
@@ -85,8 +93,8 @@ export default function CarDetails({ isOpen, closeModal, car }: CarDetailsProps)
 
                     <div className="mt-3 flex flex-wrap gap-4">
                       {Object.entries(car).map(([key, value]) => (
-                        <div key={key} className="flex w-full justify-between gap-5 text-right">
-                          <h4 className="text-gray capitalize">{key.split("_").join(" ")}</h4>
+                        <div className="flex w-full justify-between gap-5 text-right" key={key}>
+                          <h4 className="capitalize text-grey">{key.split("_").join(" ")}</h4>
                           <p className="font-semibold text-black-100">{value}</p>
                         </div>
                       ))}

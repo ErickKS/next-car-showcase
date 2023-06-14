@@ -1,26 +1,16 @@
 "use client";
 
-import { calculateCarRent } from "@/utils";
 import Image from "next/image";
 import { useState } from "react";
+
+import { calculateCarRent, generateCarImageUrl } from "@/utils";
+import { CarProps } from "@/types";
+
 import CustomButton from "./CustomButton";
 import CarDetails from "./CarDetails";
 
 interface CarCardProps {
-  car: {
-    city_mpg: number;
-    class: string;
-    combination_mpg: number;
-    cylinders: number;
-    displacement: number;
-    drive: string;
-    fuel_type: string;
-    highway_mpg: number;
-    make: string;
-    model: string;
-    transmission: string;
-    year: number;
-  };
+  car: CarProps;
 }
 
 export default function CarCard({ car }: CarCardProps) {
@@ -45,7 +35,7 @@ export default function CarCard({ car }: CarCardProps) {
       </p>
 
       <div className="relative my-3 h-40 w-full object-contain">
-        <Image src="/hero.png" alt="Car model" fill priority className="object-contain" />
+        <Image src={generateCarImageUrl(car)} alt="Car model" fill priority className="object-contain" />
       </div>
 
       <div className="relative mt-2 flex w-full">
