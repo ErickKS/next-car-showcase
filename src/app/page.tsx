@@ -4,6 +4,7 @@ import CustomFilter from "@/components/CustomFilter";
 import SearchBar from "@/components/SearchBar";
 
 import { fetchCars } from "@/utils";
+import { fuels, yearsOfProduction } from "@/constants";
 
 export default async function Home({ searchParams }) {
   const allCars = await fetchCars({
@@ -26,12 +27,12 @@ export default async function Home({ searchParams }) {
           <p>Explore the cars you might like</p>
         </div>
 
-        <div className="flex-between mt-12 w-full flex-wrap items-center gap-5">
+        <div className="mt-12 flex w-full flex-wrap items-center justify-between gap-5">
           <SearchBar />
 
           <div className="flex flex-wrap items-center justify-start gap-2">
-            <CustomFilter title="fuel" />
-            <CustomFilter title="year" />
+            <CustomFilter title="fuel" options={fuels} />
+            <CustomFilter title="year" options={yearsOfProduction} />
           </div>
         </div>
 
