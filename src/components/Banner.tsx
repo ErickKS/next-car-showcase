@@ -4,8 +4,14 @@ import Image from "next/image";
 
 import CustomButton from "./CustomButton";
 
-export default function Hero() {
-  function handleScroll() {}
+export default function Banner() {
+  function handleScroll() {
+    const nextSection = document.getElementById("discover");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   return (
     <div className="relative z-0 mx-auto flex max-w-[1440px] flex-col gap-5 xl:flex-row">
