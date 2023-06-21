@@ -15,7 +15,7 @@
     <br />
     <h3 align="center">
         <strong>
-            <code>&nbsp;<a href="https://next-shop-erick-kuwahara.vercel.app" target="_blank">live demo</a>&nbsp;</code>
+            <code>&nbsp;<a href="https://next-car-showcase-erick-kuwahara.vercel.app">live demo</a>&nbsp;</code>
         </strong>
     </h3>
 </h3>
@@ -25,7 +25,7 @@
 ## 📚 Project
 
 <p>Project developed with the objective of simulating a car showcase. In addition to featuring hundreds of models, this showcase also presents relevant information about them.</p>
-<p>Project based on the video by <a href="https://www.youtube.com/watch?v=pUNSHPyVryU" target="_blank">JavaScript Mastery</a>.</p>
+<p>Project based on the video by <a href="https://www.youtube.com/watch?v=pUNSHPyVryU">JavaScript Mastery</a>.</p>
 
 <br/>
 
