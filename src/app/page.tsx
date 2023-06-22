@@ -40,8 +40,8 @@ export default async function Home({ searchParams }) {
         {!isDataEmpty ? (
           <section>
             <div className="grid w-full grid-cols-1 gap-8 pt-14 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {allCars?.map((car) => (
-                <CarCard car={car} />
+              {allCars?.map((car, index) => (
+                <CarCard key={index} car={car} />
               ))}
             </div>
 

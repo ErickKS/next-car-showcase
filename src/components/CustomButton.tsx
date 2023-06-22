@@ -29,7 +29,7 @@ export default function CustomButton({
 
       {rightIcon && (
         <div className="relative h-6 w-6">
-          <Image src={rightIcon} alt="" fill className="object-contain" />
+          <Image src={rightIcon} alt="" fill sizes="(max-width: 24px) 100vw" className="object-contain" />
         </div>
       )}
     </button>

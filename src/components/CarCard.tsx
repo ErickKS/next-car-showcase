@@ -35,7 +35,14 @@ export default function CarCard({ car }: CarCardProps) {
       </p>
 
       <div className="relative my-3 h-40 w-full object-contain">
-        <Image src={generateCarImageUrl(car)} alt="Car model" fill priority className="object-contain" />
+        <Image
+          src={generateCarImageUrl(car)}
+          alt="Car model"
+          fill
+          sizes="(max-width: 256px) 100vw"
+          priority
+          className="object-contain"
+        />
       </div>
 
       <div className="relative mt-2 flex w-full">

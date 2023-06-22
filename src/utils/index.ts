@@ -1,6 +1,6 @@
-import { CarProps, FilterPros } from "@/types";
+import { CarProps, FilterProps } from "@/types";
 
-export async function fetchCars(filters: FilterPros) {
+export async function fetchCars(filters: FilterProps) {
   const { manufacturer, fuel, limit, model, year } = filters;
 
   const headers = {

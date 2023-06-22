@@ -13,7 +13,7 @@ export interface CarProps {
   year: number;
 }
 
-export interface FilterPros {
+export interface FilterProps {
   manufacturer: string;
   year: number;
   fuel: string;

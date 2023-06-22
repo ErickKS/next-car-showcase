@@ -31,7 +31,7 @@ export default function Banner() {
 
       <div className="flex w-full items-end justify-end xl:h-screen xl:flex-[1.5]">
         <div className="relative z-0 h-[590px] w-[90%] xl:h-full xl:w-full">
-          <Image src="/hero.png" alt="hero" fill className="object-contain" />
+          <Image src="/hero.png" alt="hero" fill sizes="(max-width: 756px) 100vw" className="object-contain" />
         </div>
 
         <div className="absolute -right-1/4 -z-10 h-[590px] w-full overflow-hidden bg-hero-bg bg-repeat-round xl:-right-1/2 xl:-top-24 xl:h-screen" />
