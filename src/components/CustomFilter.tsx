@@ -3,13 +3,14 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Fragment, useState } from "react";
-
 import { Listbox, Transition } from "@headlessui/react";
+
 import { updateSearchParams } from "@/utils";
+import { OptionProps } from "@/types";
 
 interface CustomFilterProps {
   title: string;
-  options: [title: string, value: string];
+  options: OptionProps[];
 }
 
 export default function CustomFilter({ title, options }: CustomFilterProps) {
